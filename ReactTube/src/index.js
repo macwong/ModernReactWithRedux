@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Globals } from './helpers/globals'
 
 // Create a new component that produces html
 const App = () => {
