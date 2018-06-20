@@ -9,17 +9,27 @@ class WeatherList extends Component {
         }
 
         const temps = value.list.map((weather) => weather.main.temp);
+        const pressures = value.list.map((weather) => weather.main.pressure);
+        const humidities = value.list.map((weather) => weather.main.humidity);
 
         return (
             <tr key={value.city.name}>
                 <td>{value.city.name}</td>
                 <td>
-                    <Sparklines data={temps}>
+                    <Sparklines height={120} width={180} data={temps}>
                         <SparklinesLine color="blue" />
                     </Sparklines>
                 </td>
-                <td>{value.city.name}</td>
-                <td>{value.city.name}</td>
+                <td>
+                    <Sparklines height={120} width={180} data={pressures}>
+                        <SparklinesLine color="red" />
+                    </Sparklines>
+                </td>
+                <td>
+                    <Sparklines height={120} width={180} data={humidities}>
+                        <SparklinesLine color="green" />
+                    </Sparklines>
+                </td>
             </tr>
         );
     }
