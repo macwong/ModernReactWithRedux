@@ -14,15 +14,15 @@ class WeatherList extends Component {
 
         return (
             <tr key={value.city.name}>
-                <td>{value.city.name}</td>
-                <td>
-                    <Chart data={temps} color="blue" />
+                <td className="chart-cell">{value.city.name}</td>
+                <td className="chart-cell">
+                    <Chart data={temps} color="blue" unit="K" />
                 </td>
-                <td>
-                    <Chart data={pressures} color="red" />
+                <td className="chart-cell">
+                    <Chart data={pressures} color="red" unit="hPa" />
                 </td>
-                <td>
-                    <Chart data={humidities} color="green" />
+                <td className="chart-cell">
+                    <Chart data={humidities} color="green" unit="%" />
                 </td>
             </tr>
         );
@@ -33,10 +33,10 @@ class WeatherList extends Component {
             <table className="table table-hover">
                 <thead>
                     <tr>
-                        <th>City</th>
-                        <th>Temperature</th>
-                        <th>Pressure</th>
-                        <th>Humidity</th>
+                        <th className="chart-cell">City</th>
+                        <th className="chart-cell">Temperature (K)</th>
+                        <th className="chart-cell">Pressure (hPa)</th>
+                        <th className="chart-cell">Humidity (%)</th>
                     </tr>
                 </thead>
                 <tbody>
