@@ -1,5 +1,5 @@
 // Add Youtube key here...
-const API_KEY = "";
+const API_KEY = "AIzaSyD_85gR6vHhSdXqeDnsYeR-Az73lEyIQAM";
 
 export class Globals {
     static get API_KEY() {
