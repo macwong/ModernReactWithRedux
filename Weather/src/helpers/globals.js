@@ -1,5 +1,5 @@
 // Add OpenWeatherMap key here...
-const API_KEY = "892fd94c9fb84532a7bfde8602b9ac01";
+const API_KEY = "";
 
 export class Globals {
     static get API_KEY() {
